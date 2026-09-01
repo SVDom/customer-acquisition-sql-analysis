@@ -1,5 +1,54 @@
 # Customer Acquisition & Revenue Analysis
 
+## Project Overview
+This project analyzes customer acquisition channels, payment methods, and repeat purchase behavior for a sample e-commerce dataset using SQL and SQLite.
+The goal is to understand which channels and payment methods bring the largest customer volume, the highest revenue, stronger repeat purchase behavior, and better revenue per customer — and whether geography, order status, or cancellations vary meaningfully across segments.
+
+**Note:** the dataset does not include marketing spend, so this project does not calculate real CAC. Revenue per customer is used as a simple LTV proxy.
+
+## Business Question
+Which acquisition channels and payment methods bring the most valuable and loyal customers?
+
+Additional questions:
+- From which acquisition channel do female customers generate the most revenue?
+- Which payment method generates the highest revenue and average order value?
+- What share of customers make repeat purchases?
+- Are revenue and order counts distributed evenly across cities, or only across broader settlement types (city/town/village)?
+- How do monthly acquisition and revenue trends evolve over the year?
+- Does payment method affect the order cancellation rate?
+
+## Tools
+- SQL
+- SQLite
+- DBeaver
+- CSV data import
+- GitHub for project publication
+
+## Dataset
+The project uses two CSV files:
+
+| File | Description |
+|---|---|
+| `customers.csv` | Customer profile data: user ID, gender, age, city, acquisition channel, registration date |
+| `orders.csv` | Order data: order ID, order date, purchase amount, order channel, payment method, delivery days, order status |
+
+The SQLite database contains two main tables: `customers` and `orders`, linked by `user_id` (Primary Key / Foreign Key).
+
+## Repository Structure
+
+customer-acquisition-sql-analysis/
+│
+├── README.md
+├── data/
+│ ├── customers.csv
+│ └── orders.csv
+│
+├── database/
+│ └── store_database
+│
+└── sql/
+└── query_result.sql
+
 ## Analysis Steps
 1. Checked data volume, date range, and revenue totals.
 2. Created a SQLite database with `customers` and `orders` tables (Primary Key / Foreign Key), imported CSV data, and verified the relationship via View Diagram.
