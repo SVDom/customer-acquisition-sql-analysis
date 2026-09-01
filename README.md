@@ -35,7 +35,7 @@ The project uses two CSV files:
 The SQLite database contains two main tables: `customers` and `orders`, linked by `user_id` (Primary Key / Foreign Key).
 
 ## Repository Structure
-
+```
 customer-acquisition-sql-analysis/
 │
 ├── README.md
@@ -48,7 +48,7 @@ customer-acquisition-sql-analysis/
 │
 └── sql/
 └── query_result.sql
-
+```
 ## Analysis Steps
 1. Checked data volume, date range, and revenue totals.
 2. Created a SQLite database with `customers` and `orders` tables (Primary Key / Foreign Key), imported CSV data, and verified the relationship via View Diagram.
